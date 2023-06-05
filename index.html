@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/39b9782b21.js" crossorigin="anonymous"></script>
+     <script src="./js/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container-weather">
+        <div class="buttons">
+            <div class="addmore-button">
+                <button class="add-more-inputs" onclick="clicks()">+</button>
+            </div>
+            <div class="search-reset-info">
+                <button class="search-button" onclick="searchButton()">search</button>
+                <button class="reset-button" onclick="refreshButton()">Reset</button>
+
+            </div>
+        </div>
+       
+        <div class="cities" id="cities">
+
+            <div class="ufo">
+                <div class="head"></div>
+                <input type="text" class="base_cloud" name="" id="city" placeholder="enter city name">
+                <div class="x"></div>
+            </div>
+        </div>
+        <div id="show-ufo--animation" class="show-ufo--animation">
+            <img id="show-ufo" class="show-ufo" src="./images/ufo.svg" alt="">
+        </div>
+
+        <div class="infos" id="infos">
+            <!-- <div class="info-card">
+                <div class="city-name">
+                    <h5>Mumbai</h5>
+                </div>
+                <h2 class="deg">32
+                    <span>C</span>
+                </h2>
+                <div class="icon">
+                    <i class="fas fa-cloud fa-5x"></i>
+                </div>
+                <div class="desc">
+                    <h4>Clear Sky</h4>
+                </div> -->
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

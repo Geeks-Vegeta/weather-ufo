@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    background-color: rgb(3, 6, 15);
+
+}
+
+
+@keyframes append-animate {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;	
+    }
+    }
+
+@keyframes append-ufo {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;	
+    }
+    }
+
+
+
+@keyframes example {
+    0%   {
+        /* transform: scale(0);
+        opacity: 0; */
+        left: 20%;
+
+    }
+    25%  {
+        transform: scale(1);
+        opacity: 1;	
+        right: 40%;
+    }
+    50%  {
+        transform: scale(0);
+        opacity: 0;
+        left: 70%;
+    }
+    100% {
+        /* transform: scale(1);
+        opacity: 1;	 */
+        left: 20%;
+    }
+    }
+
+
+.container-weather{
+    margin: 1rem;
+}
+
+.base_cloud{
+    width: 10rem;
+    height: 3rem;
+    border: 1px groove rgb(240, 234, 234);
+    border-top: none;
+    border-radius: 2rem;
+    outline: none;
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cities{
+    width: 75rem;
+    height: 10rem;
+    display: flex;
+    overflow-x: auto;
+    align-items: center;
+    align-self: center;
+
+}
+
+.x{
+    background-color: transparent;
+    width: 4rem;
+    height: 15px;
+    border: 1px solid red;
+    margin: 0rem 3rem;
+    border-bottom: none;
+    border-left-width: 0.5rem;
+    border-right-width: 0.5rem;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+
+
+}
+
+.cities::-webkit-scrollbar {
+    width: 5px;
+  }
+
+.cities::-webkit-scrollbar-track {
+    background: rgba(36, 101, 131, 0.548);
+    border-radius: 10px;
+}
+
+.cities::-webkit-scrollbar-thumb {
+    background:  linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(7, 0, 211, 1) 100%);
+    height: 0.1rem;
+    border-radius: 10px;
+
+  }
+
+.cities::-webkit-scrollbar-thumb:hover {
+    background: rgb(100, 100, 100);
+    border-radius: 10px;
+  }
+
+.cities::-webkit-scrollbar-thumb:active {
+    background: rgb(68, 68, 68);
+    border-radius: 10px;
+  }
+
+
+.head{
+    width: 4rem;
+    height: 2rem;
+    background-color: rgba(110, 182, 84, 0.63);
+    margin: 0rem 3rem;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+
+}
+
+.show-ufo--animation{
+    display: none;
+    position: absolute;
+    top: 50%;
+    animation: example 7s infinite;
+
+}
+
+.show-ufo{
+    display: none;
+    width: 5rem;
+}
+
+.ufo{
+    margin: 0 2rem;
+}
+
+.add-more-inputs{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: rgb(6, 7, 7);
+    background-color: rgb(252, 248, 248);
+    transition: 1s ease;
+    box-shadow: 1px 1px 13px 5px rgba(255, 255, 255, 0.562);
+    margin: 1rem;
+}
+
+.add-more-inputs:hover{
+    background-color: rgb(231, 228, 28);
+    color: rgb(241, 238, 26);
+    box-shadow: 2px 2px 100px 7rem rgba(255, 253, 139, 0.925);
+
+}
+
+.search-button{
+    width: 7rem;
+    height: 3rem;
+    margin: 1rem 0rem;
+    background-color: aqua;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+
+
+.search-button:hover{
+   background-color: rgb(76, 111, 207);
+   color: aqua;
+
+}
+
+
+.reset-button{
+    width: 7rem;
+    height: 3rem;
+    margin: 1rem 0rem;
+    background-color: rgb(103, 231, 71);
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.reset-button:hover{
+    background-color: rgb(138, 29, 165);
+   color: rgb(43, 252, 224);
+}
+
+.infos{
+    width: 75rem;
+    height: 20rem;
+    display: flex;
+    overflow-x: auto;
+    align-items: center;
+    align-self: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+
+.infos::-webkit-scrollbar {
+    width: 5px;
+  }
+
+.infos::-webkit-scrollbar-track {
+    background: rgba(36, 101, 131, 0.548);
+    border-radius: 10px;
+}
+
+.infos::-webkit-scrollbar-thumb {
+    background:  linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(7, 0, 211, 1) 100%);
+    height: 0.1rem;
+    border-radius: 10px;
+
+  }
+
+.infos::-webkit-scrollbar-thumb:hover {
+    background: rgb(100, 100, 100);
+    border-radius: 10px;
+  }
+
+.infos::-webkit-scrollbar-thumb:active {
+    background: rgb(68, 68, 68);
+    border-radius: 10px;
+  }
+
+
+.info-card{
+    min-width: 12rem;
+    height: 17rem;
+    background-color: rgba(58, 70, 70, 0.452);
+    border-radius: 3rem;
+    margin: 0 1rem;
+    animation: append-animate .3s linear;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.info-card:hover{
+    box-shadow: 1px 1px 1rem 1px rgb(255, 233, 233);
+
+}
+
+
+.city-name{
+    text-align: center;
+    margin:2rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.deg{
+    text-align: center;
+    margin:1rem;
+    color: white;
+    font-size: larger;
+}
+
+.icon{
+    text-align: center;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.desc{
+    text-align: center;
+    color: white;
+    margin: 1rem 0rem;
+}

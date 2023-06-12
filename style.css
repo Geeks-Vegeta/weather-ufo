@@ -4,7 +4,15 @@
     box-sizing: border-box;
 }
 html,body{
-    background-color: rgb(3, 6, 15);
+    /* background-color: rgb(3, 6, 15); */
+    background-color:rgb(3, 6, 15);
+/* background-image:
+radial-gradient(rgba(255, 255, 255, 0.233), rgba(255,255,255,.2) 2px, transparent 40px),
+radial-gradient(rgba(255, 255, 255, 0.384), rgba(255,255,255,.15) 1px, transparent 30px),
+/* radial-gradient(rgba(255, 255, 255, 0.356), rgba(255,255,255,.1) 2px, transparent 40px), */
+/* radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+background-position: 0 0, 40px 60px, 130px 270px, 70px 100px; */ 
 
 }
 
@@ -30,6 +38,60 @@ html,body{
         opacity: 1;	
     }
     }
+
+@keyframes ufo-updown {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;	
+    }
+    
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 10px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+
+@keyframes head-color {
+    0% { border: 1px solid blue; 
+        border-bottom: none;
+    border-left-width: 0.5rem;
+    border-right-width: 0.5rem;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    }
+    25%  {  border: 1px solid rgb(11, 201, 175);
+        border-bottom: none;
+        border-left-width: 0.5rem;
+        border-right-width: 0.5rem;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%; }
+    50%  {  border: 1px solid rgb(201, 11, 115);
+        border-bottom: none;
+        border-left-width: 0.5rem;
+        border-right-width: 0.5rem;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%; }
+    75%  {  border: 1px solid rgb(140, 228, 0);
+        border-bottom: none;
+        border-left-width: 0.5rem;
+        border-right-width: 0.5rem;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%; }
+    100%   {  border: 1px solid rgb(127, 23, 168);
+        border-bottom: none;
+        border-left-width: 0.5rem;
+        border-right-width: 0.5rem;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%; }   
+}
+
 
 
 
@@ -98,6 +160,7 @@ html,body{
     border-right-width: 0.5rem;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
+    animation: head-color 2s infinite;
 
 
 }
@@ -132,11 +195,15 @@ html,body{
 .head{
     width: 4rem;
     height: 2rem;
-    background-color: rgba(110, 182, 84, 0.63);
+    background-color: rgba(0, 194, 219, 0.63);
     margin: 0rem 3rem;
     border-top-right-radius: 50%;
     border-top-left-radius: 50%;
 
+}
+
+.head:hover{
+    background-color: aqua;
 }
 
 .show-ufo--animation{
@@ -154,6 +221,9 @@ html,body{
 
 .ufo{
     margin: 0 2rem;
+     animation: ufo-updown 2s , floating 2s 2s infinite linear;
+
+
 }
 
 .add-more-inputs{

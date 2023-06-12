@@ -16,6 +16,7 @@ const clicks=()=>{
     let new_div_x=document.createElement("div");
     new_div_x.setAttribute("class","x");
     new_div.appendChild(new_div_x);
+    // floating 2s infinite linear
 
     document.getElementById("cities").appendChild(new_div);
 
